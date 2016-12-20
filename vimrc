@@ -132,6 +132,9 @@ execute "au BufNewFile,BufRead " . join(g:indentationFileTypes, ",") . " set fil
 " Tab setting for golang source files
 execute "au BufNewFile,BufRead *.go set tabstop=2"
 
+" Tab setting for Makefiles
+execute "au BufNewFile,BufRead Makefile set tabstop=2"
+
 autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <leader>i <Plug>(go-install)
 autocmd FileType go nmap <leader>r <Plug>(go-run)
