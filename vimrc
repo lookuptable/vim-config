@@ -147,7 +147,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 " " Avoid showing pyc files
 let NERDTreeIgnore = [ '\.pyc$' ]
 
-set clipboard=unnamed
+if $TMUX == ''
+  set clipboard=unnamed
+endif
 
 if &diff
   colo industry
