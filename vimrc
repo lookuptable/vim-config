@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 
+Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -135,9 +136,23 @@ execute "au BufNewFile,BufRead *.go set tabstop=2"
 " Tab setting for Makefiles
 execute "au BufNewFile,BufRead Makefile set tabstop=2"
 
-autocmd FileType go nmap <leader>b <Plug>(go-build)
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#cmd#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>i <Plug>(go-install)
 autocmd FileType go nmap <leader>r <Plug>(go-run)
+autocmd FileType go nmap <leader>t <Plug>(go-test)
+autocmd FileType go nmap <leader>c <Plug>(go-coverage-toggle)
+
+let g:go_fmt_command = "goimports"
 
 set autowrite
 
@@ -154,3 +169,8 @@ endif
 if &diff
   colo industry
 endif
+
+" Shortcuts for quickfix list
+map <C-n> :cnext<CR>
+map <C-p> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
