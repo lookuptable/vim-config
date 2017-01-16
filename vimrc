@@ -134,9 +134,11 @@ execute "au BufNewFile,BufRead " . join(g:indentationFileTypes, ",") . " set fil
 
 " Tab setting for golang source files
 execute "au BufNewFile,BufRead *.go set tabstop=2"
+execute "au BufNewFile,BufRead *.go set shiftwidth=2"
 
 " Tab setting for Makefiles
 execute "au BufNewFile,BufRead Makefile set tabstop=2"
+execute "au BufNewFile,BufRead *.go set shiftwidth=2"
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
