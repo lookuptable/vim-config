@@ -5,6 +5,7 @@ nerdtree/
 powerline/
 splitjoin.vim/
 syntastic/
+tagbar/
 taglist.vim/
 vim-colors-solarized/
 vim-flake8/

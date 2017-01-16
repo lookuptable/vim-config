@@ -18,6 +18,7 @@ Plugin 'fatih/vim-go'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'jnurmine/Zenburn'
 Plugin 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim/' }
+Plugin 'majutsushi/tagbar'
 Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -81,6 +82,7 @@ let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 map <c-z> :NERDTreeTabsToggle<cr>
 map <c-x> :TlistToggle<cr>
+map <c-c> :TagbarToggle<cr>
 
 let g:EclimCompletionMethod = 'omnifunc'
 
@@ -152,7 +154,36 @@ autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <leader>t <Plug>(go-test)
 autocmd FileType go nmap <leader>c <Plug>(go-coverage-toggle)
 
+autocmd BufReadPre,FileReadPre *.go :TagbarOpen
+
 let g:go_fmt_command = "goimports"
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+    \ }
 
 set autowrite
 
