@@ -156,7 +156,9 @@ autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <leader>t <Plug>(go-test)
 autocmd FileType go nmap <leader>c <Plug>(go-coverage-toggle)
 
-autocmd BufReadPre,FileReadPre *.go :TagbarOpen
+if !&diff
+  autocmd BufReadPre,FileReadPre *.go :TagbarOpen
+endif
 
 let g:go_fmt_command = "goimports"
 let g:tagbar_type_go = {
