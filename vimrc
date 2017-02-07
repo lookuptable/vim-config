@@ -82,7 +82,7 @@ let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 map <c-z> :NERDTreeTabsToggle<cr>
 map <c-x> :TlistToggle<cr>
-map <c-c> :TagbarToggle<cr>
+map <c-b> :TagbarToggle<cr>
 
 let g:EclimCompletionMethod = 'omnifunc'
 
@@ -155,10 +155,6 @@ autocmd FileType go nmap <leader>i <Plug>(go-install)
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <leader>t <Plug>(go-test)
 autocmd FileType go nmap <leader>c <Plug>(go-coverage-toggle)
-
-if !&diff
-  autocmd BufReadPre,FileReadPre *.go :TagbarOpen
-endif
 
 let g:go_fmt_command = "goimports"
 let g:tagbar_type_go = {
