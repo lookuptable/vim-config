@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 
 Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'SirVer/ultisnips'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -202,6 +203,9 @@ endif
 if &diff
   colo industry
 endif
+
+" Configuraiton for UltiSnips
+let g:UltiSnipsExpandTrigger="<c-e>"
 
 " Shortcuts for quickfix list
 map <C-n> :cnext<CR>
