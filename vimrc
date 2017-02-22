@@ -156,7 +156,8 @@ autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <leader>t <Plug>(go-test)
 autocmd FileType go nmap <leader>c <Plug>(go-coverage-toggle)
 autocmd FileType go nmap <leader>gd <Plug>(go-def-tab)
-autocmd FileType go nmap <leader>gv <Plug>(go-def-vertical)
+autocmd FileType go nmap <leader>gv <Plug>(go-def-split)
+
 autocmd FileType go nmap <leader>tb :TagbarToggle<cr>
 
 let g:go_fmt_command = "goimports"
@@ -187,6 +188,12 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
     \ }
+
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 set autowrite
 
