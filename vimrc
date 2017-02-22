@@ -16,6 +16,7 @@ Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
+Plugin 'fatih/molokai'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'jnurmine/Zenburn'
 Plugin 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim/' }
@@ -117,8 +118,12 @@ EOF
 " Make python code look prettier
 let python_highlight_all=1
 
-" set background=dark
-" colorscheme solarized
+" Color scheme configuration
+let g:rehash256 = 1
+let g:molokai_original = 1
+colorscheme molokai
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
 
 set directory=$HOME/.vim/cache
 
