@@ -225,3 +225,6 @@ let g:UltiSnipsExpandTrigger="<c-e>"
 map <C-n> :cnext<CR>
 map <C-p> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
+
+" Bindings for tab pages
+nnoremap gc :tabclose<CR>
