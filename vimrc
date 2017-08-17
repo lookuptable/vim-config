@@ -228,3 +228,7 @@ nnoremap <leader>a :cclose<CR>
 
 " Bindings for tab pages
 nnoremap gc :tabclose<CR>
+
+" Disable F1 built-in help key
+nmap <F1> :echo<CR>
+imap <F1> <C-o>:echo<CR>
