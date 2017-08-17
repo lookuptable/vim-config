@@ -232,3 +232,6 @@ nnoremap gc :tabclose<CR>
 " Disable F1 built-in help key
 nmap <F1> :echo<CR>
 imap <F1> <C-o>:echo<CR>
+
+" Let F5 do what F5 does
+nmap <F5> :checktime<CR>
