@@ -161,7 +161,8 @@ autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <leader>t <Plug>(go-test)
 autocmd FileType go nmap <leader>c <Plug>(go-coverage-toggle)
 autocmd FileType go nmap <leader>gd <Plug>(go-def-tab)
-autocmd FileType go nmap <leader>gv <Plug>(go-def-split)
+autocmd FileType go nmap <leader>gb <Plug>(go-def-split)
+autocmd FileType go nmap <leader>gv <Plug>(go-def-vertical)
 
 autocmd FileType go nmap <leader>tb :TagbarToggle<cr>
 
@@ -235,3 +236,5 @@ imap <F1> <C-o>:echo<CR>
 
 " Let F5 do what F5 does
 nmap <F5> :checktime<CR>
+
+nmap zz ZZ
