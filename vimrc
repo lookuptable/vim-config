@@ -227,6 +227,9 @@ map <C-n> :cnext<CR>
 map <C-p> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
 
+" Always use `quickfix` list instead of `location` list
+let g:go_list_type = "quickfix"
+
 " Bindings for tab pages
 nnoremap gc :tabclose<CR>
 
