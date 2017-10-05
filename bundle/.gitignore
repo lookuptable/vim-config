@@ -11,5 +11,6 @@ tagbar/
 taglist.vim/
 vim-colors-solarized/
 vim-flake8/
+vim-fugitive/
 vim-go/
 vim-nerdtree-tabs/
