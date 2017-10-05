@@ -241,3 +241,6 @@ imap <F1> <C-o>:echo<CR>
 nmap <F5> :checktime<CR>
 
 nmap zz ZZ
+
+inoremap jk <esc>
+inoremap kj <esc>
