@@ -157,7 +157,7 @@ function! s:build_go_files()
 endfunction
 
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-autocmd FileType go nmap <leader>i <Plug>(go-install)
+autocmd FileType go nmap <leader>i <Plug>(go-info)
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <leader>t <Plug>(go-test)
 autocmd FileType go nmap <leader>c <Plug>(go-coverage-toggle)
@@ -196,11 +196,13 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
     \ }
 
+let g:go_auto_sameids = 1
+let g:go_auto_type_info = 1
+let g:go_highlight_build_constraints = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
 let g:go_metalinter_autosave = 1
 let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 
