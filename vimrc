@@ -14,18 +14,18 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'SirVer/ultisnips'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'fatih/vim-go'
 Plugin 'fatih/molokai'
+Plugin 'fatih/vim-go'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'jnurmine/Zenburn'
-Plugin 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim/' }
 Plugin 'majutsushi/tagbar'
 Plugin 'nvie/vim-flake8'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-scripts/taglist.vim'
 
@@ -106,16 +106,6 @@ nnoremap <space> za
 " Use `zz` to expand everythong
 nnoremap zz zR
 
-" python with virtualenv support
-py3 << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
-
 " Make python code look prettier
 let python_highlight_all=1
 
@@ -129,7 +119,7 @@ highlight NonText ctermbg=none
 set directory=$HOME/.vim/cache
 
 " Indentation style for C++ and Python source code
-let g:indentationFileTypes = map(['h', 'cc', 'cpp', 'py', 'sh', 'json', 'yaml', 'yml'], '"*." . v:val')
+let g:indentationFileTypes = map(['h', 'cc', 'cpp', 'md', 'py', 'sh', 'json', 'yaml', 'yml'], '"*." . v:val')
 execute "au BufNewFile,BufRead " . join(g:indentationFileTypes, ",") . " set tabstop=2"
 execute "au BufNewFile,BufRead " . join(g:indentationFileTypes, ",") . " set softtabstop=2"
 execute "au BufNewFile,BufRead " . join(g:indentationFileTypes, ",") . " set shiftwidth=2"
