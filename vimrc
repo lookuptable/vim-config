@@ -186,8 +186,8 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
     \ }
 
-let g:go_auto_sameids = 1
-let g:go_auto_type_info = 1
+" let g:go_auto_sameids = 1
+" let g:go_auto_type_info = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
