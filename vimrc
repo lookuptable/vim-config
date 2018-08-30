@@ -237,3 +237,6 @@ nmap zz ZZ
 
 inoremap jk <esc>
 inoremap kj <esc>
+
+set incsearch
+set hlsearch
