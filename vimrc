@@ -113,7 +113,7 @@ let python_highlight_all=1
 " Color scheme configuration
 let g:rehash256 = 1
 let g:molokai_original = 1
-colorscheme molokai
+colorscheme desert
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 
@@ -214,7 +214,7 @@ if $TMUX == ''
 endif
 
 if &diff
-  colo industry
+  colo desert
 endif
 
 " Configuraiton for UltiSnips
