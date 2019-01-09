@@ -121,7 +121,7 @@ highlight NonText ctermbg=none
 set directory=$HOME/.vim/cache
 
 " Indentation style for C++ and Python source code
-let g:indentationFileTypes = map(['h', 'cc', 'cpp', 'md', 'py', 'sh', 'json', 'ts', 'yaml', 'yml'], '"*." . v:val')
+let g:indentationFileTypes = map(['h', 'cc', 'cpp', 'md', 'py', 'sh', 'sql', 'json', 'ts', 'yaml', 'yml'], '"*." . v:val')
 execute "au BufNewFile,BufRead " . join(g:indentationFileTypes, ",") . " set tabstop=2"
 execute "au BufNewFile,BufRead " . join(g:indentationFileTypes, ",") . " set softtabstop=2"
 execute "au BufNewFile,BufRead " . join(g:indentationFileTypes, ",") . " set shiftwidth=2"
