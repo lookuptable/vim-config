@@ -26,6 +26,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-scripts/taglist.vim'
@@ -245,3 +246,7 @@ inoremap kj <esc>
 
 set incsearch
 set hlsearch
+
+" Autosave everything when focus is lost
+" http://vim.wikia.com/wiki/Auto_save_files_when_focus_is_lost
+autocmd FocusLost * :wa

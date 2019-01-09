@@ -15,3 +15,4 @@ vim-flake8/
 vim-fugitive/
 vim-go/
 vim-nerdtree-tabs/
+vim-tmux-focus-events/
