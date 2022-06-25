@@ -14,7 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'SirVer/ultisnips'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'ycm-core/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/molokai'
 Plugin 'fatih/vim-go'
